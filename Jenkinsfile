@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy to K8s') {
             steps {
                 sh "sed -i 's|tag|${params.BUILD_TAG}|' deployment.yaml"
-                sh "kubectl apply -f deployment.yaml --validate=false"
+                sh "kubectl apply -f deployment.yaml"
                 sh "kubectl apply -f service.yaml"
                 sh "kubectl get service"
             }
