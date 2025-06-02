@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Cloning Repo') {
             steps {
-                git branch: 'main', url: 'https://github.com/Rakshitsen/Ci_pipeline.git'
+                git branch: 'main', url: 'https://github.com/Rakshitsen/Cd-pipeline.git'
             }
         }
 
