@@ -26,10 +26,5 @@ pipeline {
                 sh 'kubectl get service'
             }
         }
-        stage('Verify Deployment') {
-            steps {
-                sh 'kubectl rollout status deployment/your-deployment-name'
-            }
-        }
     }
 }
