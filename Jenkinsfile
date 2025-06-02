@@ -9,13 +9,7 @@ pipeline {
     stages {
         stage('Cloning Repo') {
             steps {
-                git branch: 'develop', url: 'https://github.com/Rakshitsen/Cd-pipeline.git'
-            }
-        }
-        stage('Verify Cluster Connection') {
-            steps {
-                sh 'kubectl cluster-info'
-                sh 'kubectl get nodes'
+                git branch: 'main', url: 'https://github.com/Rakshitsen/Cd-pipeline.git'
             }
         }
         stage('Deploy to K8s') {
