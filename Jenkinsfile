@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'KMaster' }
 
     parameters {
         string(name: 'BUILD_TAG', defaultValue: 'latest', description: 'Tag of Docker Image')
